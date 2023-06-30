@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    color: var(--violetclair);
+    background-color: var(--noirgris);
+}
+
+:root {
+    --noirgris: #1E1E1E;
+    --violetclair: #F7EEFF;
+    --titre1: 'Montserrat', sans-serif;
+}
+
+
+h1 {
+    font-family: var(--titre1);
+    font-weight: 600;
+    margin-bottom: 6em;
+}
+
+p {
+    margin: 0;
+}
+
+/* ----------- Input todo ---------- */
+.container {
+    width: 100%;
+    /* border: 1px solid #eee; */
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.container form {
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.container form button {
+    margin-left: 4em;
+}
+
+input {
+    padding: 5px 0px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid var(--violetclair);
+    width: 100%;
+    color: var(--violetclair);
+    font-family: var(--titre1);
+    text-transform: uppercase;
+    outline: 0;
+}
+
+button {
+    color: var(--noirgris);
+    background-color: var(--violetclair);
+    text-transform: uppercase;
+    font-family: var(--titre1);
+    font-weight: 600;
+    padding: 5px 15px;
+    border: 0px;
+    border-radius: 5px;
+    margin: 0 3px;
+    cursor: pointer;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+    margin-top: 4em;
+}
+
+li {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    padding: 6px 0;
+}
+
+li input {
+    flex: 1;
+    border: none;
+    font-size: 1em;
+    font-weight: 300;
+    margin-left: 20px;
+}
+
+li p {
+    flex: 1;
+    font-family: var(--titre1);
+    font-weight: 300;
+}
+
+li .todo {
+    background: var(--noirgris);
+    flex: 0 0 20px;
+    height: 20px;
+    border-radius: 30px;
+    margin-right: 15px;
+    border: 3px solid var(--violetclair);
+}
+
+li .done {
+    background: var(--violetclair);
+    flex: 0 0 20px;
+    height: 20px;
+    border-radius: 30px;
+    margin-right: 15px;
+    border: 1px solid var(--violetclair);
+}
+
+li .done-text {
+    text-decoration: line-through;
+}
+
+@media screen and (min-width: 990px) {
+    .container {
+        max-width: 700px;
+    }
+}
